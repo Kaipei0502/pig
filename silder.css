@@ -1,0 +1,51 @@
+/* 首頁輪播照片樣式 */
+.homepage-slider {
+    height: 500px;
+    overflow:hidden;
+    background-color: rgb(36, 35, 35);
+  }
+  
+  .homepage-slider img {
+    width: 80%;
+    height: 500px;
+    position: absolute;
+    left: 10%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 4s ease;
+  }
+  
+  .homepage-slider img.active {
+    opacity: 1;
+  }
+  
+  
+  /* 輪播動畫 */
+  @keyframes slideshow {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 0;
+    }
+  }
+  
+  .homepage-slider img:nth-child(1) {
+    animation: slideshow 15s linear 0s infinite;
+    background-color: rgb(36, 35, 35);  
+  }
+  
+  .homepage-slider img:nth-child(2) {
+    animation: slideshow 15s linear 5s infinite;
+  }
+  
+  .homepage-slider img:nth-child(3) {
+    animation: slideshow 15s linear 10s infinite;
+  }

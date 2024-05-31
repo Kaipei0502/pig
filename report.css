@@ -1,0 +1,756 @@
+/* 背景格式 */
+  body {
+    background-color:rgb(36, 35, 35);
+    margin:0px;
+  }
+  
+  /* 標題文字格式 */
+  h1, h2, h3 {
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  h4, h5, h6 {
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  /* 內文文字格式 */
+  p, a {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  i{
+    color: whitesmoke;
+  }
+
+
+
+  /* 超連結文字格式 */
+  a {
+    text-decoration: none;
+  }
+  
+  /* 超連結滑鼠懸停效果 */
+  a:hover {
+    color: #b53461;
+  }
+  
+  /* headtitle樣式 */
+  .headtitle {
+    background-color: rgb(36, 35, 35);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* headtitle的ul樣式 */
+  .headtitle ul {
+    list-style: none;
+    margin: 10px 0 0px;
+    padding: 0;
+    float: right;
+  }
+  
+  /* headtitle的li樣式 */
+  .headtitle li {
+    display: inline-block;
+    margin: 0 20px;
+    line-height: 50px;
+  }
+
+  /* headtitle li的最後一個(登入) */
+  /* 有登入狀態 */
+  .headtitle li:last-child  a.logined{
+    background-color: #45484a;
+    padding: 8px 10px 8px 10px;
+    border-radius: 23px;
+  }
+  /* 未登入狀態 */
+  .headtitle li:last-child  a{
+    background-color: #45484a;
+    padding: 8px 10px 8px 10px;
+    border-radius: 23px;
+  }
+  
+  /* headtitle的logo */
+  img.logo{
+    max-width: 100%;
+    height:60px; 
+    width:179px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  /* headtitle文字輸入框樣式(搜尋) */
+  input[type="text"] {
+    padding: 10px 15px 10px 15px;
+    border-radius: 13px;
+    border: none;
+    font-size: 14px;
+    margin: 10px 0;
+    background-color: rgb(195, 183, 183);
+  }
+  /* headtitle結束 */
+  
+  
+  /* 圖片樣式 */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* 按鈕樣式 */
+  button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: gray;
+    color: white;
+  }
+
+  .choose{
+    margin-bottom: 30px;
+    background-color: rgb(69, 66, 66);
+    height: 70px;
+    width: 100%;
+    left: 15;
+  }
+
+  .choose ul {
+    list-style: none;
+    margin: 10px 0 0px;
+    padding: 0;
+  }
+  
+  .choose li {
+    display: inline-block;
+    margin: 0 0px;
+    padding:10px;
+    line-height: 50px;
+  }
+  .choose li.target{
+    background-color: rgb(36, 35, 35);
+    font-size: 20;
+
+  }
+  /* 電影清單 */
+  .list-title {
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-left: 20px;
+    margin-bottom: 40px;
+  }
+  .movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; 每列平均分布*/
+    align-items: center;
+  }
+  
+  .movie-list a{
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+  }
+
+  .movie-item {
+    width: 20%;
+    margin-bottom: 5%;
+    position: relative;
+  }
+  
+  img.movie-img {
+    width: 60%;
+    height: 60%;
+    margin: auto; /* 圖置中 */
+    display:block;/* 圖置中 */
+  }
+  
+  .movie-title {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .movie-title h3 {
+    /* display: inline-block;
+    margin-right: 0.5rem; */
+    text-align: center;
+  }
+  
+  .heart-icon {
+    color: #999;
+    cursor: pointer;
+  }
+  .collection-heart-icon {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .heart-icon:hover,.heart-icon.active {
+    color: red;
+  }
+  
+  .movie-stock {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #999;
+    text-align: center;
+  }
+
+/* add css */
+
+  input[type="submit"] {
+    background-color: rgb(195, 183, 183); /* 設置背景顏色 */
+    color: rgb(36, 35, 35); /* 設置文字顏色 */
+    border: none; /* 刪除邊框 */
+    padding: 10px 20px 10px 20px; /* 設置內邊距 */
+    text-align: center; /* 設置文字置中 */
+    text-decoration: none; /* 刪除文字下劃線 */
+    display: inline-block; /* 將按鈕設置為行內元素 */
+    font-size: 18px; /* 設置字體大小 */
+    cursor: pointer; /* 設置滑鼠指針樣式 */
+    border-radius: 4px; /* 設置邊框半徑 */
+  }
+
+  input[type="radio"] {
+    width: 40px;
+    display: inline-block;
+    border: solid #007aff;
+    border-width: 0 3px 3px 0;
+  }
+
+  input[type="checkbox"] {
+    width: 40px;
+    display: inline-block;
+    border: solid #007aff;
+    border-width: 0 3px 3px 0;
+  }
+
+  /* 設定樣式 */
+  label {
+    display: inline-block;
+    background-color: rgb(195, 183, 183);
+    padding: 10px 15px 10px 15px;
+    border-radius: 13px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .add_head {
+    color: white;
+    font-size: large;
+    position: relative;
+    margin-top: 80px;
+    text-align: center;
+ 
+  }
+
+  .add {
+    color: white;
+    font-size: large;
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+
+  hr {
+    color: white;
+    width: 70%;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .label1 {
+    width: 90px;
+    text-align: right;
+    display: inline-block;
+  }
+
+  .label2 {
+    width: 80px;
+    text-align: left;
+    display: inline-block;
+  }
+
+  .label3 {
+    width: 40px;
+    text-align: left;
+    display: inline-block;
+  }
+
+  .line1 {
+    width: 100%; 
+    text-align: center;
+    display: inline-block;
+
+  }
+
+  .Input_frame1 {
+    display: inline-block;
+    padding: 10px 15px 10px 15px;
+    border-radius: 13px;
+    border: none;
+    font-size: 14px;
+    margin: 10px 0;
+    background-color: rgb(195, 183, 183);
+    width: 500px;
+  }
+
+  .Input_frame2 {
+    display: inline-block;
+    padding: 10px 15px 10px 15px;
+    border-radius: 13px;
+    border: none;
+    font-size: 14px;
+    margin: 10px 0;
+    background-color: rgb(195, 183, 183);
+    width: 500px;
+    height: 90px;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: rgb(195, 183, 183);
+    border-radius: 13px;
+    width: 530px;
+    height: 40px;
+  }
+
+
+  /*browser.php css start*/
+  ul.breadcrumb{
+    margin-top:80px;
+    background-color:rgb(100, 97, 97);
+    height: 40px;
+    width: 98%;
+    padding-inline-start:2%;
+  }
+
+  li.breadcrumb-item {
+    list-style: none;
+    display: inline-block;
+    padding-right: 5px;
+    padding-top: 8px;
+    color: white;
+  }
+
+  li.breadcrumb-item a{
+    color: white;
+  }
+
+  .frame{
+    position: relative;
+    margin-top:3%;
+    margin-left:13%;
+    width:70%;
+    height: 90%;
+  }
+
+  .frame img {  
+    position:absolute;
+    top:60px;
+    height: 300px;
+    width: 200px;
+  }
+
+  .frame table{
+  position: absolute;
+  top:20px;
+  left:240px;
+  width:80%;
+  }
+
+  .frame h3{
+  margin-bottom:1px;
+  }
+
+  td.topic{
+  text-align-last:justify;
+  vertical-align: top;
+  width:15%;
+  height: 30px;
+  }
+
+  td.content{
+  padding-left: 20px;
+  /* vertical-align: top; */
+  width:85%;
+  height: 30px;
+  }
+  /*browser.php css end*/
+
+  /* no movie data*/
+  h1.noanswer{
+    position: relative;
+    top:100px;
+    color:rgb(100,97,97);
+    width:40%;
+    padding-left: 30%;
+    padding-right: 30%;
+    text-align-last:justify;
+    text-align: center;
+    margin-bottom: 20%;
+  }
+
+  /* search.php start */
+  h3.search-hint{
+    margin-top:80px;
+    background-color:rgb(100, 97, 97);
+    height: 25px;
+    padding-inline-start:4%;
+    padding: 10px 10px;
+  }
+  /* search.php end */
+
+  /* enroll.php and login.php start */
+  .enroll-content, .login-content {
+    margin-top: 150px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+  }
+  table.enroll{
+    border: 1px solid white; /* 設定表格邊框 */
+    border-collapse: collapse; /* 將相鄰的邊框合併 */
+    padding: 10px; /* 設定儲存格內距 */
+    border-spacing: 0; /* 設定儲存格之間的距離 */
+    border-radius: 20% ;
+    background-color: black;
+  }
+  .enroll th{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #444; /* 設定表頭背景色 */
+    color: white; /* 設定表頭文字顏色 */
+    text-align: center; /* 設定表頭文字置中對齊 */
+    padding: 10px;
+  }
+  .enroll td{
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: white;
+    padding: 10px; /* 設定儲存格內距 */
+  }
+ 
+  .enroll button {
+    margin-left: 10px;
+  }
+ 
+  .enroll font {
+    font-family: Calibri, sans-serif;
+    font-size: 20px;
+    color: white;
+  }
+  table.enroll td span.error{
+   color: red;
+  }
+
+  .enroll td:nth-child(odd) {
+   background-color: black; /* 設定偶數列背景色 */
+  }
+  /* enroll.php and login.php end */
+
+/* information.php start */
+
+.toyotas {
+  position: relative;
+}
+
+.toyota-hd {
+  background-color: tan;
+  display: inline-block;
+  padding: 5px 20px;
+  margin-right: 10px;
+  float: left;
+ 
+}
+
+.toyota input[type="radio"]{
+  display: none;
+}
+
+.toyota-bd {
+  width: 100%;
+  height: 500%;
+  background-color: rgb(163, 140, 98);
+  position: absolute;
+  top: 110%;
+  left: 0;
+  visibility: hidden;
+  border-radius: 10px;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+input[name=toyotas]:checked+.toyota-hd {
+  background-color: rgb(161, 145, 118);
+}
+
+input[name=toyotas]:checked~.toyota-bd {
+  visibility: visible;
+}
+
+.logout{
+  position: relative;
+  top: 250px;
+}
+
+.informationcentered {
+  text-align: center;
+}
+/* information.php end */
+
+/* rentreturn.php start */
+  .rentreturn{
+    margin-top: 5%;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+  .button-list{
+    text-align: center;
+  }
+
+  .rent{
+    text-align: center;
+  }
+
+  .rentreturn table{
+    margin-top: 20px;
+    margin-left:auto; 
+    margin-right:auto;
+  }
+
+  .rentreturn td.topic{
+    text-align-last:justify;
+    vertical-align: top;
+    width:40%;
+    height: 30px;
+  }
+
+  .tab_content td.content{
+    padding-left: 20px;
+    /* vertical-align: top; */
+    width:60%;
+    height: 30px;
+  }
+
+  .tab_css{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .tab_css input.tab{
+    display:none
+  }
+
+  .tab_css label{
+    margin: 0 10px 5px 0;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #999; 
+    color: #fff; 
+    opacity: 0.5;
+  }
+  .tab_content{
+    margin-top: 3% ;
+    order:1;
+    display: none; 
+    width:100%; 
+    border-bottom: 3px solid #ddd; 
+    line-height: 1.6; 
+    font-size: .9em; 
+    padding: 15px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+  }
+  .tab_css input:checked + label{
+    opacity: 1;
+    font-weight:bold;
+  }
+	.tab_css input:checked + label + .tab_content{
+    display: initial;
+  }
+
+  select.rent{
+    padding: 10px 15px 10px 15px;
+    border-radius: 13px;
+    border: none;
+    font-size: 14px;
+    margin: 10px 0;
+    background-color: rgb(195, 183, 183);
+    width: 205px;
+    height: 38px;
+  }
+/* rentreturn.php end */
+
+
+/* remove.php start */
+.remove{
+  margin-top: 5%;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+.button-list{
+  text-align: center;
+}
+
+.remove-select{
+  text-align: center;
+}
+
+.remove table{
+  margin-top: 20px;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.remove td.topic{
+  text-align-last:justify;
+  vertical-align: top;
+  width:40%;
+  height: 30px;
+}
+
+select.remove{
+  padding: 10px 15px 10px 15px;
+  border-radius: 13px;
+  border: none;
+  font-size: 14px;
+  margin: 10px 0;
+  background-color: rgb(195, 183, 183);
+  width: 205px;
+  height: 38px;
+}
+/* remove.php end */
+/* backstage.php start */
+
+.chartArea{
+  margin-top: 130px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.chartArea .chartItem{
+  margin-bottom: 4%;
+  width: 44%;
+  padding-left: 3%;
+}
+.chartItem .topic{
+  text-align: center;
+  font-size: 30px;
+}
+.chartItem p{
+  font-size: 15px;
+  text-align: center;
+}
+.chartItem .chart{
+  text-align: center;
+  width: 80%;
+  height: 400px;
+}
+.static{
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; 每列平均分布 */
+  align-items: center;
+  margin-left: 5%;
+}
+.static .stItem{
+  width: 20%;
+  height:200px;
+  position: relative; 
+  padding: 20px;
+  transition: all 0.3s ease 0s;
+}
+.stItem .content{
+  width: 100%;
+  height:200px;
+  background: #b1a6a6ba;
+  border-radius: 3%;
+}
+.stItem .content:hover{
+  box-shadow: 5px 10px 10px rgba(152, 158, 163, 0.988);
+  background: #7b7676ba;
+}
+.stItem .text{
+  position: relative;
+  top:15%;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+.stItem .number{
+  position: relative;
+  top:30%;
+  font-family: Arial, sans-serif;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+}
+/* backstage.php end */
+
+
+/* record.php start */
+table.TB_COLLAPSE {
+  width:100%;
+  border-collapse:collapse;
+}
+
+table.TB_COLLAPSE thead th {
+  padding:5px 0px;
+  color:#fff;
+  background-color:#915957;
+}
+table.TB_COLLAPSE tbody td {
+  padding:5px 0px;
+  color:#555;
+  text-align:center;
+  background-color:#fff;
+  border-bottom:1px solid #d7a057;
+}
+
+/* record.php end */
+
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+ul.pagination li a.active {
+background-color: #4CAF50;
+color: white;
+}
+
+ul.pagination li a:hover:not(.active) { background-color: #ddd; }
